@@ -42,18 +42,14 @@ header {
   background-color: rgb(255, 117, 227);
 }
 
-table{
-  border: solid color(srgb red green blue);
-  border-color: rgb(202, 216, 227);
-  border-radius: 3px;
-}
 .menu-card {
-  width: 320px;
+  color: rgb(255, 127, 204);
+  width: 80%;
+  height: 400px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #fff8ee;
-  border: 4px double rgb(202, 216, 227);
-  border-radius: 12px;
+  background-color: #fbf4fb;
+  border: 12px solid rgb(252, 94, 218);
 }
 
 .menu-card h2 {
