@@ -1,12 +1,39 @@
 body {
   text-align: center;
+  font-family: "Press Start 2P", cursive;
+  background: linear-gradient(
+    to bottom,
+    rgb(254, 214, 230),
+    rgb(238, 213, 246),
+    rgb(211, 232, 255)
+  );
+  min-height: 100vh;
 }
 
 header {
-  font-family: sans-serif;
+  font-family: "Press Start 2P", cursive;
+  padding: 30px;
 }
 
 .teaser {
   margin: 50px;
   font-style: italic;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.button-grid div {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.button-grid:hover{
+  background-color: rgb(255, 117, 227);
 }
