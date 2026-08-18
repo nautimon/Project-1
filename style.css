@@ -8,10 +8,10 @@ body {
     rgb(211, 232, 255)
   );
   min-height: 100vh;
+  margin: 0;
 }
 
 header {
-  font-family: "Press Start 2P", cursive;
   padding: 30px;
 }
 
@@ -22,18 +22,22 @@ header {
 
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   padding: 20px;
 }
 
-.button-grid div {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
+.button-grid button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  background-color: #f7f3f7;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 12px;
+  cursor: pointer;
 }
 
-.button-grid:hover{
+.button-grid button:hover {
+  color: rgb(206, 252, 237);
   background-color: rgb(255, 117, 227);
 }
