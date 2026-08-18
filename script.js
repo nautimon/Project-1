@@ -191,3 +191,36 @@ function getNextQuestion() {
   //
   // Write your code below.
 }
+function showDemoQuestion(category) {
+  const menuCard = document.querySelector(".menu-card");
+
+  menuCard.classList.add("wipe");
+
+  setTimeout(function() {
+    menuCard.classList.remove("wipe");
+    menuCard.classList.add("selected-category");
+
+    menuCard.innerHTML = `
+      <h2>Start ${category} Trivia</h2>
+      <button onclick="startTrivia('${category}')">Start Playing</button>
+    `;
+  }, 400);
+}
+function startTrivia(category) {
+  const menuCard = document.querySelector(".menu-card");
+
+  menuCard.innerHTML = `
+    <h2>${category}</h2>
+    <p>Question 1</p>
+    <p>State whose license plate reads "Land of 10,000 Lakes".</p>
+    <button>Show Answer</button>
+  `;
+}
+const categoryButtons = document.querySelectorAll(".button-grid button");
+
+categoryButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    showDemoQuestion(button.dataset.category);
+  });
+});
+alert("JavaScript is connected!");

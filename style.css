@@ -50,6 +50,8 @@ header {
   padding: 30px;
   background-color: #fbf4fb;
   border: 12px solid rgb(252, 94, 218);
+  position: relative;
+  overflow: hidden;
 }
 
 .menu-card h2 {
@@ -75,3 +77,34 @@ header {
 .menu-card button:hover {
   background-color: rgb(220, 90, 200);
 }
+
+.menu-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(255, 117, 227);
+  z-index: 10;
+}
+
+.menu-card.wipe::after {
+  animation: fill-menu 0.4s ease forwards;
+}
+
+@keyframes fill-menu {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.menu-card.selected-category {
+  background-color: rgb(255, 117, 227);
+  color: white;
+}
+
