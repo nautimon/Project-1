@@ -3,8 +3,10 @@ let categoryID = null;
 // For now, we'll include one hard-coded question in our question bank.
 let questionBank = [
   {
-    question: 'State whose license plate reads "Land of 10,000 Lakes".',
-    answer: "Minnesota"
+    //question: 'State whose license plate reads "Land of 10,000 Lakes".',
+    //answer: "Minnesota"
+    <p id="question"></p>
+    <p id="answer"></p>
   }
 ];
 let questionIndex = 0;
