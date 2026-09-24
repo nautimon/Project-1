@@ -55,6 +55,10 @@ function storeNewQuestions(data) {
 }
 
 async function getQuestionRandom() {
+  async function getQuestionRandom() {
+  const response = await fetch("https://opentdb.com/api.php?amount=1");
+  const data = await response.json();
+}
   // TODO: This will get a new random question from the API to display on our page.
   //
   // Complete this function so that it makes an API call to the /random endpoint.
