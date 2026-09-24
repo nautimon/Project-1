@@ -44,6 +44,15 @@ function populateQuestion() {
 // --------------- MILESTONE 4: POPULATE WITH RANDOM QUESTION ---------------------
 
 function storeNewQuestions(data) {
+  questionBank = [
+    {
+      question: data.results[0].question,
+      answer: data.results[0].correct_answer
+    }
+  ];
+
+  questionIndex = 0;
+}
   // TODO: This will store questions from the API into our local questionBank.
   //
   // Complete this function by assigning the data provided to us from the API
@@ -58,6 +67,9 @@ async function getQuestionRandom() {
   async function getQuestionRandom() {
   const response = await fetch("https://opentdb.com/api.php?amount=1");
   const data = await response.json();
+
+  storeNewQuestions(data);
+  populateQuestion();
 }
   // TODO: This will get a new random question from the API to display on our page.
   //
@@ -85,7 +97,7 @@ function getNextQuestion() {
 }
 
 // TODO: Once you implement the above, you can uncomment out the line below.
-// getQuestionRandom();
+ getQuestionRandom();
 
 // --------------------- MILESTONE 5: POPULATE CATEGORIES FROM API ---------------------
 
